@@ -15,6 +15,9 @@ repositories {
   mavenCentral()
   maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
+dependencies {
+
+}
 
 kotlin {
   jvm {
@@ -27,6 +30,9 @@ kotlin {
     val jvmMain by getting {
       dependencies {
         implementation(compose.desktop.currentOs)
+        implementation("co.yml:ychat:1.1.1")
+        implementation(compose.materialIconsExtended)
+        implementation("org.jetbrains.compose.material:material-icons-extended-desktop:_")
       }
     }
     val jvmTest by getting

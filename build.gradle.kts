@@ -43,6 +43,9 @@ compose.desktop {
   application {
     mainClass = "MainKt"
     nativeDistributions {
+      windows{
+        iconFile.set(project.file("resources/icons/Icon_512.png"))
+      }
       targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
       packageName = "ChatGPT-Desktop"
       packageVersion = "1.0.0"

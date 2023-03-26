@@ -150,6 +150,11 @@ fun chatSidebard()
         }
     }
 }
+@Composable
+fun mainLandingPage()
+{
+
+}
 
 @Composable
 @Preview

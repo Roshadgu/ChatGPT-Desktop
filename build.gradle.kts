@@ -17,6 +17,7 @@ repositories {
 }
 dependencies {
 
+ //implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 }
 
 kotlin {
@@ -33,6 +34,7 @@ kotlin {
         implementation("co.yml:ychat:1.1.1")
         implementation(compose.materialIconsExtended)
         implementation("org.jetbrains.compose.material:material-icons-extended-desktop:_")
+        implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
       }
     }
     val jvmTest by getting

@@ -20,12 +20,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import ui.navigation.chatSidebard
+import ui.navigation.home
 
 @Composable
 @Preview
 fun App()
 {
   chatSidebard()
+  home()
 
 
 }

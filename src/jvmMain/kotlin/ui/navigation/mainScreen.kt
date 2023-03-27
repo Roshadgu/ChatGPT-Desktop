@@ -3,6 +3,9 @@ import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -13,6 +16,7 @@ import androidx.compose.material.icons.outlined.*
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Send
+import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 
 val dark_one = Color(0x191b1c)
@@ -37,7 +42,7 @@ fun chatSidebard()
             modifier =
             Modifier
                 .background(Color(212023))
-                .fillMaxHeight()
+                .fillMaxHeight() //column doesn't reach all the way to the bottom
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.Center,
         )
@@ -150,11 +155,57 @@ fun chatSidebard()
         }
     }
 }
+
+val examples = listOf("Explain quantum computing in simple terms", "Got any creative ideas for a 10 year old’s birthday?", "How do I make an HTTP request in Javascript?")
+val capabilities = listOf("Remembers what user said earlier in the conversation", "Allows user to provide follow-up corrections", "Trained to decline inappropriate requests")
+val limitations = listOf("May occasionally generate incorrect information", "May occasionally produce harmful instructions or biased content", "Limited knowledge of world and events after 2021")
+
 @Composable
-fun mainLandingPage()
+fun home()
 {
+    Text("ChatGPT")
+    Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally)
+    {
+       Icon(Icons.Outlined.LightMode,"")
+        Text("Examples")
+
+        Row(){
+
+        }
+        Row(){}
+        Row(){}
+    }
+
+    Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally)
+    {
+        Icon(Icons.Outlined.Bolt,"")
+        Text("Capabilities")
+
+        Row(){}
+        Row(){}
+        Row(){}
+    }
+
+    Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally)
+    {
+        Icon(Icons.Rounded.Warning,"")
+        Text("Limitations")
+
+        Row(){}
+        Row(){}
+        Row(){}
+    }
 
 }
+
+////@Composable
+////fun mainScreen()
+////{
+////    ConstraintLayout()
+////    {
+////        val (sections, text) = createRefs()
+////    }
+//}
 
 @Composable
 @Preview
